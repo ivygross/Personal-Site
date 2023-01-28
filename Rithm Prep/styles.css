@@ -1,0 +1,105 @@
+#container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#message {
+  align-self: center;
+  margin-top: 30vh;
+}
+
+#message h1 {
+  color: black;
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 30px;
+  overflow: hidden;
+  /* prevents rest of text from being revealed before animation is finished */
+  border-right: 2px solid orange;
+  /* cursor */
+  white-space: nowrap;
+  /* keeps text on one line */
+  margin: 0 auto;
+  /* scroll effect */
+  letter-spacing: 3px;
+  animation:
+    typing 2.5s steps(32, end),
+    blink-caret .5s step-end infinite;
+
+  /* animation will take 2.5 seconds, going through */
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange
+  }
+}
+
+#nav_bar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#nav_bar li {
+  padding: 10px;
+  font-family: monospace;
+  font-size: 16px;
+  text-decoration: none;
+
+}
+
+#nav_bar a {
+  text-decoration: none;
+  color: green;
+  transition: color .25s;
+}
+
+#nav_bar a:hover {
+  color: orange;
+}
+
+#nav_bar a.active {
+  text-decoration: underline;
+}
+
+span.strikethrough {
+  text-decoration: line-through;
+}
+
+#bio {
+  padding: 15% 25% 0 25%;
+
+  align-self: center;
+}
+
+#bio p {
+  font-family: monospace;
+  font-size: 20px;
+
+}
+
+span.almost_all {
+  font-style: italic;
+  color: green;
+}
