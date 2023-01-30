@@ -1,0 +1,163 @@
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(218, 218, 186);
+
+}
+
+
+#message {
+  align-self: center;
+  margin-top: 30vh;
+}
+
+#message h1 {
+  color: black;
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 30px;
+  overflow: hidden;
+  /* prevents rest of text from being revealed before animation is finished */
+  border-right: 2px solid orange;
+  /* cursor */
+  white-space: nowrap;
+  /* keeps text on one line */
+  margin: 0 auto;
+  /* scroll effect */
+  letter-spacing: 3px;
+  animation:
+    typing 2.5s steps(32, end),
+    blink-caret .5s step-end infinite;
+
+  /* animation will take 2.5 seconds, going through */
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange
+  }
+}
+
+#nav_bar {
+  padding-right: 15px;
+  padding-top: 30px;
+}
+
+#nav_bar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#nav_bar li {
+  padding: 10px;
+  font-family: monospace;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+#nav_bar a {
+  text-decoration: none;
+  color: green;
+  transition: color .25s;
+}
+
+#nav_bar a:hover {
+  color: orange;
+}
+
+#nav_bar a.active {
+  text-decoration: underline;
+}
+
+span.strikethrough {
+  text-decoration: line-through;
+}
+
+#bio {
+  padding: 15% 25% 0 25%;
+  align-self: center;
+  color: black;
+}
+
+#bio p {
+  background-color: lightgoldenrodyellow;
+  font-family: monospace;
+  box-shadow: 10px 10px 5px gray;
+  font-size: 20px;
+  padding: 5px;
+}
+
+span.almost_all {
+  font-style: italic;
+  color: green;
+}
+
+#container h1.resume {
+  align-self: center;
+}
+
+#container a.resume {
+text-decoration: none;
+cursor: pointer;
+font-family: monospace;
+font-size: 40px;
+color: darkgreen;
+transition: color 0.3s;
+}
+
+#container a.resume:hover {
+  color: rgb(25, 185, 91);
+}
+
+#container p.contact_information {
+  align-self: center;
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+#ivy_pic {
+  max-height: 30%;
+  width: auto;
+  margin: 0 28.5%;
+  border-radius: 50%;
+}
+
+#check_out {
+  margin-top: 20%;
+}
+
+#nav_bar img {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  max-height: 10%;
+  width: auto;
+}
